@@ -1,0 +1,134 @@
+.docsHeader {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0 2rem;
+	position: fixed;
+	top: 0;
+	left: 250px;
+	right: 0;
+	height: 80px;
+	background-color: #0b0b0b;
+	color: white;
+	z-index: 1000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--accent, #facc15);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+
+.searchBar {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.searchInput {
+	width: 250px;
+	border-radius: 6px;
+	outline: none;
+	font-size: 16px;
+	padding: 0.35rem 2.8rem 0.35rem 2.5rem;
+	border: none;
+	height: 32px;
+	background-color: #1e1e1e;
+	color: white;
+	transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.searchInput:focus {
+	box-shadow: 0 0 0 2px #facc15;
+	background-color: #2a2a2a;
+}
+
+.searchIcon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #898989;
+	width: 20px;
+	height: 20px;
+}
+
+.keybind {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 12px;
+	color: #aaa;
+	background-color: #2c2c2c;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-family: monospace;
+	pointer-events: none;
+	user-select: none;
+}
+
+
+.iconToggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem;
+	border-radius: 50%;
+	transition: background-color 0.3s ease, transform 0.1s ease;
+	margin-left: 1rem;
+}
+
+.toggleIcon {
+	width: 24px;
+	height: 24px;
+	color: var(--accent, #facc15);
+	transition: transform 0.3s ease;
+}
+
+.iconToggle:hover .toggleIcon {
+	transform: rotate(12deg);
+}
+
+.iconToggle:hover {
+	background-color: rgba(99, 102, 241, 0.08);
+}
+
+.iconToggle:active {
+	transform: scale(0.95);
+	box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+}
+
+
+@media (max-width: 768px) {
+	.docsHeader {
+		flex-direction: column;
+		align-items: stretch;
+		height: auto;
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+	.searchBar {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.searchInput {
+		width: 100%;
+	}
+
+	.keybind {
+		display: none;
+	}
+
+	.iconToggle {
+		align-self: flex-end;
+	}
+}

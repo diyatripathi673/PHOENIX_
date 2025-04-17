@@ -1,0 +1,70 @@
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+@font-face {
+	font-family: 'CabinetGrotesk';
+	src: url('/fonts/CabinetGrotesk-Regular.woff2') format('woff2');
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: 'CabinetGrotesk', sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.bottom-text {
+    font-size: 2rem;
+    color: #858585;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+	.page {
+		padding: 32px;
+		padding-bottom: 80px;
+	}
+
+	.main {
+		align-items: center;
+	}
+
+	.main ol {
+		text-align: center;
+	}
+
+	.ctas {
+		flex-direction: column;
+	}
+
+	.ctas a {
+		font-size: 14px;
+		height: 40px;
+		padding: 0 16px;
+	}
+
+	a.secondary {
+		min-width: auto;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
