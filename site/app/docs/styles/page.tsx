@@ -47,6 +47,7 @@ const StylesPage = () => {
             <Palette size={20} /> Styling Your Components
           </h2>
           <p>
+          
             This guide will walk you through customizing Phoenix’s UI components to match your application’s branding.
           </p>
 
