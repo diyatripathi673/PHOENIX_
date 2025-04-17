@@ -11,7 +11,6 @@ import '@/app/styles/Docs.css';
 import {
   ChevronRight,
   Palette,
-  Settings,
   Brush,
   Code2,
   Globe,
